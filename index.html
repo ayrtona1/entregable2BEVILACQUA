@@ -8,21 +8,17 @@
 <body>
     <h1>Simulador de Préstamos</h1>
     
-    <!-- Tabla para mostrar productos -->
-    <table id="product-table">
-        <tr>
-            <th>Producto</th>
-            <th>Precio</th>
-        </tr>
-    </table>
-
     <!-- Formulario para ingresar información -->
     <form id="loan-form">
         <label for="monto">Monto a prestar:</label>
         <input type="number" id="monto" required>
 
-        <label for="tipoTasa">Tipo de tasa (baja 6meses, media 12meses, alta 24meses):</label>
-        <input type="text" id="tipoTasa" required>
+        <label for="tipoTasa">Tipo de tasa:</label>
+        <select id="tipoTasa" required>
+            <option value="baja">Baja (6 meses)</option>
+            <option value="media">Media (12 meses)</option>
+            <option value="alta">Alta (24 meses)</option>
+        </select>
 
         <label for="plazo">Plazo en meses:</label>
         <input type="number" id="plazo" required>
@@ -32,6 +28,12 @@
 
     <!-- Resultados -->
     <div id="results"></div>
+
+    <!-- Tabla para mostrar préstamos guardados -->
+    <h2>Préstamos Realizados</h2>
+    <table id="prestamos-table">
+        <!-- La tabla de préstamos se llenará dinámicamente con JavaScript -->
+    </table>
 
     <script src="script.js"></script>
 </body>
